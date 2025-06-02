@@ -1,5 +1,5 @@
 import React from 'react';
-import UserList from '.src/components/UserList';
+import UserList from './components/UserList';
 import './App.css';
 
 function App() {
