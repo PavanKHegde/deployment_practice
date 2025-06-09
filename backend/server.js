@@ -19,11 +19,14 @@ app.use(helmet());
 
 
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production' 
-    ? true  
-    : ['http://localhost:3000'],
-  credentials: true
+  origin: [
+    'http://localhost:3000', // local dev
+    'https://deployment-practice-3-f5yh.onrender.com', // production frontend
+  ],
+  credentials: true,
 }));
+
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
